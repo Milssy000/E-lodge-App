@@ -11,7 +11,7 @@ import {ReactiveFormsModule } from '@angular/forms';
  import { DashboardModule } from './modules/dashboard/dashboard.module';
 
 import { RouterModule } from '@angular/router';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+
 import { AuthComponent } from './modules/authentification/auth/auth.component';
 
 
@@ -25,7 +25,7 @@ import { AuthComponent } from './modules/authentification/auth/auth.component';
     AppRoutingModule,
     DashboardModule,
     ReactiveFormsModule,
-    NgxSkeletonLoaderModule,
+
     RouterModule,
     BrowserAnimationsModule
   ],
