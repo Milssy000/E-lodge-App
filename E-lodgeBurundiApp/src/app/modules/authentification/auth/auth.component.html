@@ -1,1 +1,159 @@
-<p>auth works!</p>
+<div class="row ">
+<div class="col-8 d-none d-xl-block d-lg-block" style="padding-right: 0;">
+    <img class="w-100 img-fluid" style="height:970px" src="../../../../assets/images/bdi.jpg">
+    <h1 style="position: absolute;
+    top: 13%;
+    left: 14%;">Find the best hotel deals in Burundi...</h1 >
+</div>
+<div class="col im" style="padding-left: 95px;min-height:970px">
+<div class="row justify-content-end me-2"><img class="img-fluid" style="height:120px;width:300px" src="../../../../assets/images/my-logo.png"></div>
+
+
+    <form [formGroup]="authForm">
+     <h4 class="w-75">Login</h4> <br>
+
+     <div class="mb-3">
+        <div class="form-floating">
+            <input
+                type="text"
+                name="username"
+                style="width:75%"
+                class="form-control "
+                formControlName="username"
+                placeholder="Username"
+                autofocus
+            />
+            <label
+                for="Username"
+               
+                
+            >
+                <i
+                    class="fa-solid fa-user-circle"
+                    style="color: #999494"
+                ></i>
+                Username
+            </label>
+        </div>
+ 
+    </div>
+
+    <div class="mb-3">
+        <div class="form-floating">
+            <input
+                class="form-control "
+                type="{{ passwordType }}"
+                name="password"
+                style="width:75%"
+                placeholder="Password"
+                formControlName="password"
+            />
+            <label
+                for="Password"
+               
+                
+            >
+                <i
+                    class="fa-solid fa-lock"
+                    style="color: #999494"
+                ></i>
+                Password
+            </label>
+
+            <span
+                (click)="changePasswordType()"
+                *ngIf="showPassword"
+                role="button"
+            >
+                <i
+                    class="fa-regular fa-eye "
+                    style="
+                                 position: absolute;
+  top: 37%;
+  right: 32%;
+                
+                    "
+                ></i>
+            </span>
+            <span
+                (click)="changePasswordType()"
+                *ngIf="!showPassword"
+                role=button
+            >
+                <i
+                    class="fa-regular fa-eye-slash "
+                    style="
+                   position: absolute;
+  top: 37%;
+  right: 32%;
+                    "
+                ></i>
+            </span>
+        </div>
+    </div>
+    <br />
+
+    <div
+        class="mb-3 w-75"
+        style="
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        "
+    >
+        <button
+            type="submit"
+           [disabled]="!authForm.valid" 
+            style="
+                padding-right: 40px;
+                padding-left: 40px;
+                line-height: 30px;
+                font-weight: bold;
+                background: #3d7b4b;
+                color:white
+            "
+            class="btn "
+            routerLink="Home"
+        >
+            <span
+                
+                class="fs-6"
+                
+                >Sign in</span
+            >
+         
+        </button>
+    </div>
+    <br />
+
+    <h6>
+        <span >Don't you have account ?</span>
+        <a
+            href=""
+                               
+            id="signUp"
+            style="color: #810019"
+            routerLink="sign-up"
+            
+        >
+            Sign up</a
+        >
+    </h6>
+
+    <br />
+    <h6>
+        <a
+            href=""
+            style="color: #810019"
+            routerLink="reset-password"
+            
+        >
+            Password Forgotten ?</a
+        >
+    </h6>
+    <br />
+
+    </form>
+</div>
+</div>

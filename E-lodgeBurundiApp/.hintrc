@@ -3,10 +3,12 @@
     "development"
   ],
   "hints": {
-    "axe/text-alternatives": [
+    "axe/text-alternatives": "off",
+    "no-inline-styles": "off",
+    "axe/aria": [
       "default",
       {
-        "document-title": "off"
+        "aria-command-name": "off"
       }
     ]
   }

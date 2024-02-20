@@ -17,16 +17,14 @@ import { AuthComponent } from './modules/authentification/auth/auth.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AuthComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
     ReactiveFormsModule,
-
-    RouterModule,
+     RouterModule,
     BrowserAnimationsModule
   ],
   providers: [],

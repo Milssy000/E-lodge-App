@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+$form-floating-height: calc(3.5rem + 2px);
+
+body {
+    height: 100%;
+}
+.global-border-input {
+    border: 1px solid #c4c4c4;
+}
+
+.input-group,
+.form-check-input,
+.form-select,
+.form-control {
+    @extend .global-border-input;
+}
+
+
+.form-control {
+    @extend .form-control;
+    @extend .text-dark;
+    &:focus {
+        @extend .text-dark;
+    }
+    &:focus + label.form-label,
+    &:focus + label,
+    &:not(:placeholder-shown) + label.form-label,
+    &:not(:placeholder-shown) + label {
+        font-size: 0.9rem;
+    }
+}
+.form-control + label.form-label,
+.form-control + label,
+.form-select + label {
+    @extend .form-label;
+    @extend .text-dark;
+    &:after {
+        background-color: transparent !important;
+    }
+}
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext {
+    padding-bottom: 0;
+}
+
+.form-floating .form-control::placeholder {
+    color: transparent !important;
+}
+
+.lg-radius {
+    border-radius: 10px;
+}
+.sm-radius {
+    border-radius: 5px;
+}
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
