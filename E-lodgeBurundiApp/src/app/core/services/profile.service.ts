@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
 import { map } from 'rxjs';
@@ -5,15 +6,18 @@ import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class ProfileService {
 
   constructor(private apiService: ApiService) { 
     //comment
   }
- login(body: any) {
-    const url = '/accounts/token/';
-    return this.apiService
-        .post(url, body)
-        .pipe(map((response) => response));
+  getProfils() {
+    const url = '/accounts/profile';
+    return this.apiService.get(url).pipe(
+        map((data: any) => {
+            return data;
+        })
+    );
 }
+
 }
